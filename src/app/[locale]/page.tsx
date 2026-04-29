@@ -1,7 +1,3 @@
-'use client';
-
-import { useParams } from 'next/navigation';
-
 import { AboutSection, setupAboutPinnedTimeline } from '@/components/about-section';
 import { ContactSection } from '@/components/contact-section';
 import { HomeHero } from '@/components/home-hero';
@@ -12,9 +8,12 @@ import { WhyEksaSection } from '@/components/why-eksa-section';
 import { defaultLocale, isLocale, type Locale } from '@/i18n/config';
 import { getMessages } from '@/i18n/messages';
 
-export default function LocalizedHomePage() {
-  const params = useParams<{ locale: string }>();
-  const localeParam = params?.locale ?? defaultLocale;
+export default async function LocalizedHomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale: localeParam } = await params;
   const locale = isLocale(localeParam) ? localeParam : defaultLocale;
   const messages = getMessages(locale);
 
