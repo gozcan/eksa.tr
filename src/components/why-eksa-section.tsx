@@ -8,10 +8,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import sectionRealPhoto from '../../public/generated/section-real-photo.jpg';
 import type { Messages } from '@/i18n/messages';
 
-gsap.registerPlugin(ScrollTrigger);
-// position:fixed ile anında sabitleme — scrub ile transform-based pin yerine
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-(ScrollTrigger as any).config({ pinType: 'fixed' });
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (ScrollTrigger as any).config({ pinType: 'fixed' });
+}
 
 export function WhyEksaSection({ messages }: { messages: Messages }) {
   const wrapperRef = useRef<HTMLDivElement | null>(null);

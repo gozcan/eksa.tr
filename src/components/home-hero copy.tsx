@@ -13,7 +13,7 @@ import smokeImage from "../../public/reference/find/smoke.png";
 import { locales, type Locale } from "@/i18n/config";
 import type { Messages } from "@/i18n/messages";
 
-gsap.registerPlugin(ScrollTrigger);
+if (typeof window !== "undefined") { gsap.registerPlugin(ScrollTrigger); }
 
 const brandWordmark = "EKSA";
 

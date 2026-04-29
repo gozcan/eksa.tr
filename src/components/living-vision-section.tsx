@@ -9,7 +9,7 @@ import { AnimatedText } from './animated-text';
 import sectionRealPhoto from '../../public/generated/section-real-photo.jpg';
 import type { Messages } from '@/i18n/messages';
 
-gsap.registerPlugin(ScrollTrigger);
+if (typeof window !== "undefined") { gsap.registerPlugin(ScrollTrigger); }
 
 export function LivingVisionSection({ messages }: { messages: Messages }) {
   const rootRef = useRef<HTMLElement | null>(null);

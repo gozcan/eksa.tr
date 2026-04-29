@@ -8,7 +8,7 @@ import { useAOS } from "@/lib/animations";
 
 import type { Messages } from "@/i18n/messages";
 
-gsap.registerPlugin(ScrollTrigger);
+if (typeof window !== "undefined") { gsap.registerPlugin(ScrollTrigger); }
 
 export function ContactSection({ messages }: { messages: Messages }) {
   const rootRef = useRef<HTMLElement | null>(null);
