@@ -1,0 +1,110 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="235" y1="54" x2="1685" y2="1043" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#204A42"/>
+      <stop offset="0.48" stop-color="#163B35"/>
+      <stop offset="1" stop-color="#0C241F"/>
+    </linearGradient>
+    <radialGradient id="lightLeft" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(262 820) rotate(7.6) scale(508 376)">
+      <stop stop-color="#A98A53" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#A98A53" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lightTop" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1490 182) rotate(141.2) scale(486 336)">
+      <stop stop-color="#5D8D7F" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#5D8D7F" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#DDE9EA" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#5C7B7D" stop-opacity="0.68"/>
+    </linearGradient>
+    <linearGradient id="facade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D8D2CB"/>
+      <stop offset="1" stop-color="#A1988E"/>
+    </linearGradient>
+    <linearGradient id="warm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F6D49A"/>
+      <stop offset="1" stop-color="#BC7D3D"/>
+    </linearGradient>
+    <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#EDE4D4" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#EDE4D4" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blur-xl" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="34"/>
+    </filter>
+    <filter id="blur-md" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <rect width="1920" height="1080" fill="url(#lightLeft)"/>
+  <rect width="1920" height="1080" fill="url(#lightTop)"/>
+
+  <g opacity="0.46" filter="url(#blur-xl)">
+    <ellipse cx="1542" cy="204" rx="280" ry="126" fill="#7DA295"/>
+    <ellipse cx="280" cy="244" rx="216" ry="98" fill="#A7B9B1"/>
+  </g>
+
+  <g opacity="0.3" filter="url(#blur-md)">
+    <path d="M0 902C159 850 284 834 416 846C544 856 642 914 772 914C934 914 1046 842 1188 842C1359 842 1488 918 1920 862V1080H0V902Z" fill="#244E46"/>
+    <path d="M0 954C162 920 334 932 496 956C652 978 742 1032 930 1024C1108 1018 1240 950 1392 946C1550 942 1696 994 1920 970V1080H0V954Z" fill="#12342E"/>
+  </g>
+
+  <g transform="translate(20 32) scale(1.58)">
+    <g transform="translate(0 300)">
+      <path d="M0 474H600V570H0V474Z" fill="url(#facade)"/>
+      <path d="M40 396H560V488H40V396Z" fill="url(#facade)"/>
+      <path d="M112 302H488V404H112V302Z" fill="url(#facade)"/>
+      <path d="M184 214H428V312H184V214Z" fill="url(#facade)"/>
+
+      <g opacity="0.95">
+        <rect x="20" y="494" width="560" height="52" fill="#1E3130"/>
+        <rect x="60" y="412" width="480" height="48" fill="#223638"/>
+        <rect x="132" y="320" width="336" height="50" fill="#203537"/>
+        <rect x="204" y="234" width="200" height="42" fill="#1D3030"/>
+      </g>
+
+      <g opacity="0.95">
+        <rect x="36" y="414" width="74" height="118" fill="url(#glass)"/>
+        <rect x="122" y="414" width="74" height="118" fill="url(#warm)"/>
+        <rect x="208" y="414" width="74" height="118" fill="url(#glass)"/>
+        <rect x="294" y="414" width="74" height="118" fill="url(#warm)"/>
+        <rect x="380" y="414" width="74" height="118" fill="url(#glass)"/>
+        <rect x="466" y="414" width="74" height="118" fill="url(#glass)"/>
+
+        <rect x="92" y="320" width="80" height="116" fill="url(#warm)"/>
+        <rect x="182" y="320" width="80" height="116" fill="url(#glass)"/>
+        <rect x="272" y="320" width="80" height="116" fill="url(#glass)"/>
+        <rect x="362" y="320" width="80" height="116" fill="url(#warm)"/>
+
+        <rect x="164" y="236" width="66" height="106" fill="url(#glass)"/>
+        <rect x="238" y="236" width="66" height="106" fill="url(#warm)"/>
+        <rect x="312" y="236" width="66" height="106" fill="url(#glass)"/>
+
+        <rect x="222" y="152" width="50" height="104" fill="url(#warm)"/>
+        <rect x="280" y="152" width="50" height="104" fill="url(#glass)"/>
+      </g>
+
+      <g fill="#375B4E" opacity="0.95">
+        <ellipse cx="76" cy="404" rx="38" ry="20"/>
+        <ellipse cx="144" cy="404" rx="44" ry="24"/>
+        <ellipse cx="232" cy="310" rx="42" ry="20"/>
+        <ellipse cx="306" cy="310" rx="38" ry="18"/>
+        <ellipse cx="256" cy="220" rx="28" ry="16"/>
+        <ellipse cx="340" cy="220" rx="24" ry="14"/>
+      </g>
+    </g>
+  </g>
+
+  <g opacity="0.22" filter="url(#blur-md)">
+    <ellipse cx="1004" cy="836" rx="462" ry="178" fill="#264B44"/>
+    <ellipse cx="1510" cy="790" rx="308" ry="132" fill="#1A3C36"/>
+  </g>
+
+  <g opacity="0.54" filter="url(#blur-xl)">
+    <ellipse cx="1020" cy="962" rx="760" ry="108" fill="url(#mist)"/>
+  </g>
+
+  <rect width="1920" height="1080" fill="url(#mist)" opacity="0.08"/>
+</svg>

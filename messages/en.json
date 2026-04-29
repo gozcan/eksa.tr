@@ -1,0 +1,142 @@
+{
+  "nav": {
+    "projects": "Projects",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Get in Touch",
+    "vision": "Vision"
+  },
+  "hero": {
+    "titleLine1": "Structures Built",
+    "titleLine2": "for Tomorrow",
+    "descriptionLead": "EKSA brings design, quality and trust together across residential, commercial and lifestyle developments.",
+    "descriptionMuted": "We plan, build and deliver with a focus on lasting value in every detail.",
+    "cta": "View Projects"
+  },
+  "section1": {
+    "eyebrow": "Why EKSA?",
+    "titleLine1": "We shape the",
+    "titleLine2": "essence of living",
+    "body": "EKSA develops residential projects where aesthetics, function and well-being exist in balance. Every project is conceived to create a living experience that feels connected, calm and deeply intentional.",
+    "quote": "We do not treat architecture as a standalone object, but as a calm and refined setting for everyday life.",
+    "stat1Label": "Focus",
+    "stat1Value": "Residential",
+    "stat2Label": "Approach",
+    "stat2Value": "Curated",
+    "cta": "View Projects"
+  },
+  "section2": {
+    "eyebrow": "Living Vision",
+    "kicker": "Curated Residential Experience",
+    "title": "Distinctive",
+    "body": "EKSA develops residential experiences defined by strong architectural language, elevated detail and a more refined sense of daily life. Each project brings aesthetics, comfort and belonging together within a carefully composed living vision.",
+    "cards": [
+      {
+        "title": "Spa",
+        "body": "A calm retreat shaped by soft light, still water and a slower rhythm that clears the day away."
+      },
+      {
+        "title": "Yoga",
+        "body": "A lighter, more grounded routine where breath, movement and spatial calm work together."
+      },
+      {
+        "title": "Fitness",
+        "body": "An accessible movement infrastructure that keeps pace with the day and supports consistency."
+      },
+      {
+        "title": "Café",
+        "body": "A refined social corner for conversation, short pauses and unhurried moments."
+      }
+    ]
+  },
+  "section3": {
+    "eyebrow": "Service Layer",
+    "kicker": "Residential, Commercial, Lifestyle",
+    "title": "A project approach defined by quality rather than scale.",
+    "body": "EKSA brings different project typologies together within a single line of quality. Each vertical carries its own character in architectural language, use scenario and user experience.",
+    "items": [
+      {
+        "title": "Residential",
+        "body": "Curated residential projects that strengthen belonging, refine daily life and produce lasting value."
+      },
+      {
+        "title": "Commercial",
+        "body": "Commercial structures that sharpen brand presence, clarify circulation and build a strong relationship with their setting."
+      },
+      {
+        "title": "Lifestyle Projects",
+        "body": "Integrated living concepts that consider social experience, shared-space quality and spatial rhythm together."
+      }
+    ]
+  },
+  "section4": {
+    "eyebrow": "Projects",
+    "title": "Featured structures",
+    "body": "EKSA projects are read through strong architectural compositions and refined living scenarios. As you scroll, each structure steps forward with its own character.",
+    "cardLabel": "Selected Project",
+    "items": [
+      {
+        "title": "Panorama House",
+        "body": "A curated residential composition defined by open terraces, expansive living areas and a calmer relationship with the landscape."
+      },
+      {
+        "title": "Atelier Living",
+        "body": "An interior vision shaped by warm materials, stronger light flow and a more refined sense of everyday living."
+      },
+      {
+        "title": "Grand Lobby",
+        "body": "An arrival sequence that sharpens first impression, clarifies circulation and supports brand presence through spatial quality."
+      },
+      {
+        "title": "Stone Retreat",
+        "body": "A timeless living structure where natural texture, open-air life and a slower rhythm are brought into the same frame."
+      }
+    ]
+  },
+  "section5": {
+    "eyebrow": "About",
+    "title": "EKSA is the subsidiary that carries Ekşioğlu Group's deep-rooted construction expertise into contemporary projects.",
+    "body": "EKSA is a subsidiary of Ekşioğlu Group, which has been active in the construction sector since 1937. Across residential, commercial and lifestyle projects, it brings architectural quality, function and execution precision together with the goal of creating places that feel trustworthy and retain long-term value.",
+    "values": [
+      {
+        "label": "Root",
+        "value": "Ekşioğlu Group"
+      },
+      {
+        "label": "Founded",
+        "value": "1937"
+      },
+      {
+        "label": "Goal",
+        "value": "Lasting value"
+      }
+    ]
+  },
+  "section6": {
+    "eyebrow": "Contact",
+    "title": "Connect with EKSA for the next project ahead.",
+    "body": "You can reach our team to discuss a new residential, commercial or lifestyle project. EKSA approaches each stage of the process with clarity, trust and a strong focus on quality.",
+    "cta": "Get in Touch",
+    "panelEyebrow": "Let’s work together",
+    "panelTitle": "Every new project starts with the right dialogue.",
+    "panelBody": "From the first idea to execution decisions, we offer a direct and refined collaboration process that clarifies the path at the same table.",
+    "items": [
+      {
+        "label": "Phone",
+        "value": "0850 346 46 52",
+        "body": "You can call us directly for project discussions and general contact."
+      },
+      {
+        "label": "Address",
+        "value": "Atasehir",
+        "body": "BARBAROS MAH. ŞEN SK. NO: 16 İÇ KAPI NO: 6 ATAŞEHİR"
+      },
+      {
+        "label": "Focus",
+        "value": "Residential + lifestyle",
+        "body": "We can shape the right scope together across residential, commercial and lifestyle projects."
+      }
+    ]
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "nav": {
+    "projects": "Projeler",
+    "services": "Hizmetler",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "cta": "İletişime Geç",
+    "vision": "Vizyon"
+  },
+  "hero": {
+    "titleLine1": "Geleceğe Değer",
+    "titleLine2": "Yapılar",
+    "descriptionLead": "EKSA; konut, ticari ve yaşam projelerinde tasarım, kalite ve güveni aynı çizgide buluşturur.",
+    "descriptionMuted": "Her detayda kalıcı değer üretmek için planlar, inşa eder ve teslim eder.",
+    "cta": "Projeleri İncele"
+  },
+  "section1": {
+    "eyebrow": "Neden EKSA?",
+    "titleLine1": "Yaşamın",
+    "titleLine2": "özünü şekillendiriyoruz",
+    "body": "EKSA, estetik, işlev ve iyi yaşam hissini aynı çizgide buluşturan konut projeleri geliştirir. Her proje; bağ kuran, dinginlik veren ve ait hissettiren bir yaşam deneyimi üretmek için düşünülür.",
+    "quote": "Mimariyi yalnızca inşa etmiyor, gündelik yaşamın ritmine uyumlanan sakin ve rafine bir çevre olarak tasarlıyoruz.",
+    "stat1Label": "Odak",
+    "stat1Value": "Konut",
+    "stat2Label": "Yaklaşım",
+    "stat2Value": "Seçkin",
+    "cta": "Projeleri Gör"
+  },
+  "section2": {
+    "eyebrow": "Yaşam Vizyonu",
+    "kicker": "Seçkin Konut Deneyimi",
+    "title": "Ayrıcalıklı",
+    "body": "EKSA, mimari dili güçlü, detay seviyesi yüksek ve gündelik yaşamı daha nitelikli kılan konut deneyimleri geliştirir. Her proje; estetik, konfor ve aidiyet duygusunu aynı çerçevede buluşturan rafine bir yaşam kurgusu sunar.",
+    "cards": [
+      {
+        "title": "Spa",
+        "body": "Yumuşak ışık, sakin su yüzeyi ve sessiz bir ritimle günün yükünü geride bırakan dingin bir kaçış."
+      },
+      {
+        "title": "Yoga",
+        "body": "Nefesi, hareketi ve mekansal huzuru aynı akışta buluşturan kontrollü ve hafif bir deneyim."
+      },
+      {
+        "title": "Fitness",
+        "body": "Günün temposuna eşlik eden, erişimi kolay ve motivasyonu yüksek bir hareket altyapısı."
+      },
+      {
+        "title": "Café",
+        "body": "Sohbeti, kısa molaları ve yavaş anları destekleyen rafine bir buluşma noktası."
+      }
+    ]
+  },
+  "section3": {
+    "eyebrow": "Hizmetlerimiz",
+    "kicker": "Konut, Ticari, Yaşam",
+    "title": "Ölçekten çok niteliğe odaklanan bir proje yaklaşımı.",
+    "body": "EKSA, farklı ihtiyaçlara cevap veren proje tiplerini tek bir kalite çizgisinde bir araya getirir. Her dikey; mimari tavır, kullanım senaryosu ve kullanıcı deneyimi açısından kendi karakterini taşır.",
+    "items": [
+      {
+        "title": "Konut",
+        "body": "Aidiyet duygusu güçlü, gündelik yaşamı rafineleştiren ve uzun ömürlü değer üreten seçkin konut projeleri."
+      },
+      {
+        "title": "Ticari",
+        "body": "Marka algısını güçlendiren, akışları netleştiren ve bulunduğu çevreyle güçlü ilişki kuran ticari yapılar."
+      },
+      {
+        "title": "Yaşam Projeleri",
+        "body": "Sosyal deneyimi, ortak alan kalitesini ve mekansal ritmi birlikte düşünen bütüncül yaşam kurguları."
+      }
+    ]
+  },
+  "section4": {
+    "eyebrow": "Projeler",
+    "title": "Öne çıkan yapılar",
+    "body": "EKSA projeleri, mimari tavrı güçlü kompozisyonlar ve rafine yaşam senaryoları üzerinden okunur. Scroll ilerledikçe her yapı kendi karakteriyle öne gelir.",
+    "cardLabel": "Seçili Proje",
+    "items": [
+      {
+        "title": "Panorama House",
+        "body": "Açık terasları, geniş yaşam alanları ve dingin peyzaj ilişkisiyle öne çıkan seçkin bir konut kompozisyonu."
+      },
+      {
+        "title": "Atelier Living",
+        "body": "Işığı içeri alan, sıcak malzeme dili güçlü ve gündelik yaşamı daha rafine hissettiren bir iç mekan kurgusu."
+      },
+      {
+        "title": "Grand Lobby",
+        "body": "İlk karşılaşma anını güçlü tutan, akışı netleştiren ve marka algısını mekansal kaliteyle destekleyen giriş sahnesi."
+      },
+      {
+        "title": "Stone Retreat",
+        "body": "Doğal doku, açık hava yaşantısı ve sakin ritmi aynı çerçevede buluşturan zamansız bir yaşam yapısı."
+      }
+    ]
+  },
+  "section5": {
+    "eyebrow": "Hakkımızda",
+    "title": "EKSA, Ekşioğlu Grup'un köklü inşaat deneyimini çağdaş projelere taşıyan iştirakidir.",
+    "body": "EKSA, 1937'den bu yana inşaat sektöründe faaliyet gösteren Ekşioğlu Grup'un iştirakidir. Konut, ticari ve yaşam projelerinde mimari kaliteyi, işlevi ve uygulama hassasiyetini aynı çizgide buluşturur; her projede güven veren, uzun yıllar değerini koruyan mekanlar üretmeyi hedefler.",
+    "values": [
+      {
+        "label": "Kök",
+        "value": "Ekşioğlu Grup"
+      },
+      {
+        "label": "Kuruluş",
+        "value": "1937"
+      },
+      {
+        "label": "Hedef",
+        "value": "Kalıcı değer"
+      }
+    ]
+  },
+  "section6": {
+    "eyebrow": "İletişim",
+    "title": "Bir sonraki proje için EKSA ile bağlantıya geçin.",
+    "body": "Yeni bir konut, ticari yapı ya da yaşam projesi üzerine konuşmak için ekibimizle iletişime geçebilirsiniz. EKSA, proje sürecinin her aşamasını netlik, güven ve kalite odağıyla ele alır.",
+    "cta": "İletişime Geç",
+    "panelEyebrow": "Birlikte çalışalım",
+    "panelTitle": "Her yeni proje, doğru diyalogla başlar.",
+    "panelBody": "İlk fikirden uygulama kararlarına kadar, süreci aynı masada netleştiren doğrudan ve rafine bir çalışma yaklaşımı sunuyoruz.",
+    "items": [
+      {
+        "label": "Telefon",
+        "value": "0850 346 46 52",
+        "body": "Proje görüşmeleri ve genel iletişim için bizi doğrudan arayabilirsiniz."
+      },
+      {
+        "label": "Adres",
+        "value": "Ataşehir",
+        "body": "BARBAROS MAH. ŞEN SK. NO: 16 İÇ KAPI NO: 6 ATAŞEHİR"
+      },
+      {
+        "label": "Odak",
+        "value": "Konut + yaşam",
+        "body": "Konut, ticari ve yaşam projelerinde doğru kapsamı birlikte şekillendirebiliriz."
+      }
+    ]
+  }
+}
