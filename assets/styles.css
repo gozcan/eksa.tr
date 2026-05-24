@@ -399,10 +399,13 @@ html.lenis, html.lenis body { height: auto; }
 }
 
 /* ---------- About ---------- */
+/* Sized to fit within the 100vh sticky-stack cap on common viewports
+   (1366×768 and up). Compact paddings, tighter type, single-line headline
+   so the headline + body + stats are all on screen at once. */
 .about {
   background: var(--coffee);
   color: var(--cream);
-  padding: 160px 40px 180px;
+  padding: 90px 40px 70px;
   position: relative;
 }
 .about .wrap { max-width: 1400px; margin: 0 auto; }
@@ -413,19 +416,19 @@ html.lenis, html.lenis body { height: auto; }
   justify-content: space-between;
   align-items: center;
   gap: 24px;
-  padding-bottom: 70px;
+  padding-bottom: 28px;
   border-bottom: 1px solid var(--line-cream);
-  margin-bottom: 90px;
+  margin-bottom: 50px;
 }
 .about .top-bar .num {
   font-family: "JetBrains Mono", monospace;
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 0.3em;
 }
 .about .parent {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
 }
 .about .parent .lbl {
   font-family: "JetBrains Mono", monospace;
@@ -440,10 +443,10 @@ html.lenis, html.lenis body { height: auto; }
   gap: 10px;
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  padding: 10px 20px;
+  padding: 8px 18px;
   border: 1px solid var(--line-cream);
   border-radius: 999px;
 }
@@ -455,14 +458,14 @@ html.lenis, html.lenis body { height: auto; }
   opacity: 0.55;
 }
 
-/* Big editorial headline */
-.about .lead { margin-bottom: 110px; }
+/* Editorial headline — compact enough to fit alongside body + stats */
+.about .lead { margin-bottom: 50px; }
 .about .about-h {
   font-family: "Inter", sans-serif;
   font-weight: 300;
-  font-size: clamp(48px, 8vw, 132px);
+  font-size: clamp(40px, 5vw, 84px);
   letter-spacing: -0.025em;
-  line-height: 1;
+  line-height: 1.02;
   color: var(--cream);
 }
 .about .about-h .l { display: block; }
@@ -474,11 +477,11 @@ html.lenis, html.lenis body { height: auto; }
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   max-width: 1100px;
-  margin-bottom: 130px;
+  margin-bottom: 60px;
 }
 .about .body p {
-  font-size: 16px;
-  line-height: 1.7;
+  font-size: 15px;
+  line-height: 1.6;
   opacity: 0.8;
 }
 .about .body p strong { font-weight: 500; opacity: 1; }
@@ -487,15 +490,15 @@ html.lenis, html.lenis body { height: auto; }
 .about .stats-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  gap: 32px;
   border-top: 1px solid var(--line-cream);
-  padding-top: 60px;
+  padding-top: 36px;
 }
-.about .stats-row .cell { display: flex; flex-direction: column; gap: 20px; }
+.about .stats-row .cell { display: flex; flex-direction: column; gap: 12px; }
 .about .stats-row .cell .num {
   font-family: "Inter", sans-serif;
   font-weight: 200;
-  font-size: clamp(54px, 6.5vw, 112px);
+  font-size: clamp(40px, 4.2vw, 76px);
   letter-spacing: -0.04em;
   line-height: 1;
 }
@@ -506,7 +509,7 @@ html.lenis, html.lenis body { height: auto; }
   margin-left: 2px;
 }
 .about .stats-row .cell .label {
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   opacity: 0.65;
@@ -1000,11 +1003,13 @@ html.lenis, html.lenis body { height: auto; }
   .manifesto .grid { grid-template-columns: 1fr; gap: 50px; }
   .manifesto .label-col { position: static; }
   .manifesto .body { grid-template-columns: 1fr; gap: 22px; }
-  .about { padding: 90px 22px 100px; }
-  .about .top-bar { flex-direction: column; align-items: flex-start; gap: 20px; padding-bottom: 40px; margin-bottom: 50px; }
-  .about .lead { margin-bottom: 60px; }
-  .about .body { grid-template-columns: 1fr; gap: 24px; margin-bottom: 60px; }
-  .about .stats-row { grid-template-columns: repeat(2, 1fr); gap: 50px 30px; padding-top: 40px; }
+  .about { padding: 70px 22px 60px; }
+  .about .top-bar { flex-direction: column; align-items: flex-start; gap: 14px; padding-bottom: 22px; margin-bottom: 32px; }
+  .about .lead { margin-bottom: 36px; }
+  .about .body { grid-template-columns: 1fr; gap: 18px; margin-bottom: 42px; }
+  .about .body p { font-size: 14px; line-height: 1.55; }
+  .about .stats-row { grid-template-columns: repeat(2, 1fr); gap: 36px 24px; padding-top: 28px; }
+  .about .stats-row .cell .num { font-size: clamp(36px, 9vw, 56px); }
   .projects .hd { padding: 90px 22px 50px; flex-direction: column; align-items: flex-start; }
   .stats { padding: 90px 22px 100px; }
   .stats .row { grid-template-columns: repeat(2, 1fr); gap: 60px 30px; }
