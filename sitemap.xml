@@ -28,4 +28,58 @@
       <image:title>EKSA</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://www.eksa.tr/kvkk/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.eksa.tr/kvkk/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.eksa.tr/en/privacy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.eksa.tr/kvkk/" />
+  </url>
+  <url>
+    <loc>https://www.eksa.tr/en/privacy/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.eksa.tr/kvkk/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.eksa.tr/en/privacy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.eksa.tr/kvkk/" />
+  </url>
+  <url>
+    <loc>https://www.eksa.tr/cerez/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.eksa.tr/cerez/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.eksa.tr/en/cookies/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.eksa.tr/cerez/" />
+  </url>
+  <url>
+    <loc>https://www.eksa.tr/en/cookies/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.eksa.tr/cerez/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.eksa.tr/en/cookies/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.eksa.tr/cerez/" />
+  </url>
+  <url>
+    <loc>https://www.eksa.tr/yasal/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.eksa.tr/yasal/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.eksa.tr/en/legal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.eksa.tr/yasal/" />
+  </url>
+  <url>
+    <loc>https://www.eksa.tr/en/legal/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="tr-TR" href="https://www.eksa.tr/yasal/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.eksa.tr/en/legal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.eksa.tr/yasal/" />
+  </url>
 </urlset>
