@@ -20,17 +20,24 @@
     });
     // Expose for the anchor handler (and easier debugging in DevTools).
     window.__lenis = lenis;
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
-    // sync ScrollTrigger
-    if (typeof ScrollTrigger !== "undefined") {
+    // Drive lenis.raf from EXACTLY ONE source. The original code registered
+    // it on both native requestAnimationFrame AND gsap.ticker — each callback
+    // passed a different `time` value, so Lenis's internal dt = time - prevTime
+    // calculation flipped sign / blew up every frame, leaving targetScroll
+    // updated but `scroll` stuck. That's why nav anchor clicks looked dead
+    // intermittently: targetScroll changed but the animation never advanced.
+    // We prefer gsap.ticker when ScrollTrigger is present so ScrollTrigger
+    // updates stay in sync; otherwise fall back to plain RAF.
+    if (typeof ScrollTrigger !== "undefined" && typeof gsap !== "undefined") {
       lenis.on("scroll", ScrollTrigger.update);
       gsap.ticker.add((time) => lenis.raf(time * 1000));
       gsap.ticker.lagSmoothing(0);
+    } else {
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
     }
     return lenis;
   }
@@ -283,12 +290,11 @@
   }
 
   // -------- Anchor links --------
-  // Computes the target's document offset, then tries (in order):
-  //   1. Lenis with a numeric offset + lock:false/force:true so it works even
-  //      mid-animation and on sticky-positioned targets,
-  //   2. A manual requestAnimationFrame easing as a fallback — because Lenis
-  //      injects scroll-behavior:auto!important which kills the native
-  //      scrollIntoView({behavior:'smooth'}) fallback we used to rely on.
+  // Pass a NUMERIC offset to Lenis (Lenis 1.0.42's element/selector variants
+  // are flaky and don't update targetScroll reliably). With the single-source
+  // RAF fix in initLenis, Lenis now actually advances the animation, so we
+  // don't need a manual RAF fallback — that fallback used to race against
+  // Lenis and produce the "sometimes works, sometimes doesn't" behaviour.
   function initAnchors() {
     $$('a[href^="#"]').forEach((a) => {
       a.addEventListener("click", (e) => {
@@ -299,19 +305,10 @@
         e.preventDefault();
         const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY);
         if (lenis && typeof lenis.scrollTo === "function") {
-          try {
-            lenis.scrollTo(top, { duration: 1.4, lock: false, force: true });
-            // If Lenis silently no-ops, fall through to manual after a beat
-            const before = window.scrollY;
-            setTimeout(() => {
-              if (Math.abs(window.scrollY - before) < 4 && Math.abs(window.scrollY - top) > 4) {
-                smoothScrollTo(top, 900);
-              }
-            }, 250);
-            return;
-          } catch (_) { /* fall through */ }
+          lenis.scrollTo(top, { duration: 1.4, lock: false, force: true });
+        } else {
+          smoothScrollTo(top, 900);
         }
-        smoothScrollTo(top, 900);
       });
     });
   }
@@ -322,8 +319,7 @@
     const startTime = performance.now();
     function tick(now) {
       const p = Math.min(1, (now - startTime) / duration);
-      // cubic ease-out
-      const eased = 1 - Math.pow(1 - p, 3);
+      const eased = 1 - Math.pow(1 - p, 3); // cubic ease-out
       window.scrollTo(0, startY + dist * eased);
       if (p < 1) requestAnimationFrame(tick);
     }
