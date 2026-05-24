@@ -400,54 +400,110 @@ html.lenis, html.lenis body { height: auto; }
 
 /* ---------- About ---------- */
 .about {
-  background: var(--cream-2);
-  color: var(--coffee);
-  padding: 180px 40px 200px;
+  background: var(--coffee);
+  color: var(--cream);
+  padding: 160px 40px 180px;
   position: relative;
 }
 .about .wrap { max-width: 1400px; margin: 0 auto; }
-.about .head {
-  display: grid;
-  grid-template-columns: 1fr 1.6fr;
-  gap: 100px;
-  align-items: start;
-  margin-bottom: 140px;
-}
-.about .label-col {
+
+/* Top bar: section number on the left + parent-company badge on the right */
+.about .top-bar {
   display: flex;
-  flex-direction: column;
-  gap: 28px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding-bottom: 70px;
+  border-bottom: 1px solid var(--line-cream);
+  margin-bottom: 90px;
 }
-.about .label-col .num {
+.about .top-bar .num {
   font-family: "JetBrains Mono", monospace;
   font-size: 13px;
   letter-spacing: 0.3em;
 }
-.about .head-text h2 { margin-bottom: 36px; }
-.about .head-text p {
-  font-size: 17px;
-  line-height: 1.65;
-  max-width: 58ch;
-  opacity: 0.82;
+.about .parent {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
 }
+.about .parent .lbl {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+.about .parent .group-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border: 1px solid var(--line-cream);
+  border-radius: 999px;
+}
+.about .parent .group-name::before {
+  content: "";
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--cream);
+  opacity: 0.55;
+}
+
+/* Big editorial headline */
+.about .lead { margin-bottom: 110px; }
+.about .about-h {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: clamp(48px, 8vw, 132px);
+  letter-spacing: -0.025em;
+  line-height: 1;
+  color: var(--cream);
+}
+.about .about-h .l { display: block; }
+.about .about-h em { font-style: italic; font-weight: 300; }
+
+/* Two-column body description */
+.about .body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1100px;
+  margin-bottom: 130px;
+}
+.about .body p {
+  font-size: 16px;
+  line-height: 1.7;
+  opacity: 0.8;
+}
+.about .body p strong { font-weight: 500; opacity: 1; }
+
+/* Stats row */
 .about .stats-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
-  border-top: 1px solid var(--line);
-  padding-top: 70px;
+  border-top: 1px solid var(--line-cream);
+  padding-top: 60px;
 }
-.about .stats-row .cell {
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-}
+.about .stats-row .cell { display: flex; flex-direction: column; gap: 20px; }
 .about .stats-row .cell .num {
   font-family: "Inter", sans-serif;
   font-weight: 200;
-  font-size: clamp(56px, 7vw, 120px);
+  font-size: clamp(54px, 6.5vw, 112px);
   letter-spacing: -0.04em;
   line-height: 1;
+}
+.about .stats-row .cell .num .suffix {
+  font-size: 0.42em;
+  vertical-align: super;
+  opacity: 0.55;
+  margin-left: 2px;
 }
 .about .stats-row .cell .label {
   font-size: 11px;
@@ -944,9 +1000,11 @@ html.lenis, html.lenis body { height: auto; }
   .manifesto .grid { grid-template-columns: 1fr; gap: 50px; }
   .manifesto .label-col { position: static; }
   .manifesto .body { grid-template-columns: 1fr; gap: 22px; }
-  .about { padding: 100px 22px 110px; }
-  .about .head { grid-template-columns: 1fr; gap: 40px; margin-bottom: 70px; }
-  .about .stats-row { grid-template-columns: repeat(2, 1fr); gap: 60px 30px; padding-top: 50px; }
+  .about { padding: 90px 22px 100px; }
+  .about .top-bar { flex-direction: column; align-items: flex-start; gap: 20px; padding-bottom: 40px; margin-bottom: 50px; }
+  .about .lead { margin-bottom: 60px; }
+  .about .body { grid-template-columns: 1fr; gap: 24px; margin-bottom: 60px; }
+  .about .stats-row { grid-template-columns: repeat(2, 1fr); gap: 50px 30px; padding-top: 40px; }
   .projects .hd { padding: 90px 22px 50px; flex-direction: column; align-items: flex-start; }
   .stats { padding: 90px 22px 100px; }
   .stats .row { grid-template-columns: repeat(2, 1fr); gap: 60px 30px; }
