@@ -18,6 +18,8 @@
       touchMultiplier: 1.4,
       lerp: 0.08,
     });
+    // Expose for the anchor handler (and easier debugging in DevTools).
+    window.__lenis = lenis;
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -280,7 +282,13 @@
     });
   }
 
-  // -------- Anchor links via lenis --------
+  // -------- Anchor links --------
+  // Computes the target's document offset, then tries (in order):
+  //   1. Lenis with a numeric offset + lock:false/force:true so it works even
+  //      mid-animation and on sticky-positioned targets,
+  //   2. A manual requestAnimationFrame easing as a fallback — because Lenis
+  //      injects scroll-behavior:auto!important which kills the native
+  //      scrollIntoView({behavior:'smooth'}) fallback we used to rely on.
   function initAnchors() {
     $$('a[href^="#"]').forEach((a) => {
       a.addEventListener("click", (e) => {
@@ -289,10 +297,37 @@
         const target = document.querySelector(id);
         if (!target) return;
         e.preventDefault();
-        if (lenis) lenis.scrollTo(target, { duration: 1.4 });
-        else target.scrollIntoView({ behavior: "smooth" });
+        const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY);
+        if (lenis && typeof lenis.scrollTo === "function") {
+          try {
+            lenis.scrollTo(top, { duration: 1.4, lock: false, force: true });
+            // If Lenis silently no-ops, fall through to manual after a beat
+            const before = window.scrollY;
+            setTimeout(() => {
+              if (Math.abs(window.scrollY - before) < 4 && Math.abs(window.scrollY - top) > 4) {
+                smoothScrollTo(top, 900);
+              }
+            }, 250);
+            return;
+          } catch (_) { /* fall through */ }
+        }
+        smoothScrollTo(top, 900);
       });
     });
+  }
+  function smoothScrollTo(targetY, duration) {
+    const startY = window.scrollY;
+    const dist = targetY - startY;
+    if (Math.abs(dist) < 2) return;
+    const startTime = performance.now();
+    function tick(now) {
+      const p = Math.min(1, (now - startTime) / duration);
+      // cubic ease-out
+      const eased = 1 - Math.pow(1 - p, 3);
+      window.scrollTo(0, startY + dist * eased);
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
   }
 
   // -------- Scroll progress bar --------
