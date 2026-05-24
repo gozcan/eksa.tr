@@ -1,0 +1,9 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Block Vercel infrastructure paths from indexing
+Disallow: /_vercel/
+
+Sitemap: https://www.eksa.tr/sitemap.xml
+Host: https://www.eksa.tr
