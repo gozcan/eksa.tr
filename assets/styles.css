@@ -398,6 +398,64 @@ html.lenis, html.lenis body { height: auto; }
   opacity: 0.85;
 }
 
+/* ---------- About ---------- */
+.about {
+  background: var(--cream-2);
+  color: var(--coffee);
+  padding: 180px 40px 200px;
+  position: relative;
+}
+.about .wrap { max-width: 1400px; margin: 0 auto; }
+.about .head {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 100px;
+  align-items: start;
+  margin-bottom: 140px;
+}
+.about .label-col {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.about .label-col .num {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  letter-spacing: 0.3em;
+}
+.about .head-text h2 { margin-bottom: 36px; }
+.about .head-text p {
+  font-size: 17px;
+  line-height: 1.65;
+  max-width: 58ch;
+  opacity: 0.82;
+}
+.about .stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  border-top: 1px solid var(--line);
+  padding-top: 70px;
+}
+.about .stats-row .cell {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.about .stats-row .cell .num {
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  font-size: clamp(56px, 7vw, 120px);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+.about .stats-row .cell .label {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+
 /* ---------- Pinned image scaler ---------- */
 .scaler {
   height: 220vh;
@@ -886,6 +944,9 @@ html.lenis, html.lenis body { height: auto; }
   .manifesto .grid { grid-template-columns: 1fr; gap: 50px; }
   .manifesto .label-col { position: static; }
   .manifesto .body { grid-template-columns: 1fr; gap: 22px; }
+  .about { padding: 100px 22px 110px; }
+  .about .head { grid-template-columns: 1fr; gap: 40px; margin-bottom: 70px; }
+  .about .stats-row { grid-template-columns: repeat(2, 1fr); gap: 60px 30px; padding-top: 50px; }
   .projects .hd { padding: 90px 22px 50px; flex-direction: column; align-items: flex-start; }
   .stats { padding: 90px 22px 100px; }
   .stats .row { grid-template-columns: repeat(2, 1fr); gap: 60px 30px; }
