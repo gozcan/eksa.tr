@@ -5,7 +5,7 @@
   "installCommand": null,
   "outputDirectory": ".",
   "cleanUrls": true,
-  "trailingSlash": false,
+  "trailingSlash": true,
   "redirects": [
     { "source": "/index.html", "destination": "/", "permanent": true },
     { "source": "/home", "destination": "/", "permanent": true }

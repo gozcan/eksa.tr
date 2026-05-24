@@ -87,7 +87,10 @@ html.lenis, html.lenis body { height: auto; }
   font-family: "Inter", sans-serif;
   font-weight: 300;
   letter-spacing: -0.02em;
-  line-height: 0.95;
+  /* Tight optical line-height, but with a small padding-top on each
+     line so Turkish diacritics (ğ, Ğ, İ etc.) aren't clipped by the
+     line's overflow: hidden. */
+  line-height: 0.88;
   font-size: clamp(56px, 9.5vw, 168px);
 }
 .display em {
@@ -178,11 +181,12 @@ html.lenis, html.lenis body { height: auto; }
 }
 .nav .links a:hover { opacity: 1; }
 .nav .links a:hover::after { right: 0; }
-.nav .lang { font-size: 12px; letter-spacing: 0.22em; cursor: pointer; }
-.nav .lang span { opacity: 0.5; transition: opacity 0.3s; }
+.nav .lang { font-size: 12px; letter-spacing: 0.22em; cursor: pointer; display: inline-flex; gap: 8px; align-items: center; }
+.nav .lang a, .nav .lang span { opacity: 0.5; transition: opacity 0.3s; color: inherit; text-decoration: none; }
 .nav .lang .active { opacity: 1; }
-.nav .lang:hover span { opacity: 0.9; }
+.nav .lang:hover a, .nav .lang:hover span { opacity: 0.9; }
 .nav .lang:hover .active { opacity: 1; }
+.nav .lang a:hover { opacity: 1; }
 
 .nav.scrolled { padding: 14px 40px; }
 
@@ -260,7 +264,15 @@ html.lenis, html.lenis body { height: auto; }
   gap: 60px;
 }
 .hero h1 { color: var(--cream); }
-.hero h1 .line { display: block; overflow: hidden; }
+.hero h1 .line {
+  display: block;
+  /* Allow ascenders/descenders and Turkish diacritics (ğ, Ğ, İ) to
+     render without clipping. The slim vertical padding gives breve and
+     dot-above marks visible breathing room without changing the
+     perceived line stack. */
+  padding-top: 0.08em;
+  padding-bottom: 0.02em;
+}
 .hero h1 .line > span {
   display: inline-block;
 }
