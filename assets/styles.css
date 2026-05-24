@@ -87,15 +87,16 @@ html.lenis, html.lenis body { height: auto; }
   font-family: "Inter", sans-serif;
   font-weight: 300;
   letter-spacing: -0.02em;
-  /* Tight optical line-height, but with a small padding-top on each
-     line so Turkish diacritics (ğ, Ğ, İ etc.) aren't clipped by the
-     line's overflow: hidden. */
-  line-height: 0.88;
+  /* line-height: 1 with Inter's tight intrinsic metrics gives a compact
+     visual stack while leaving enough vertical room for Turkish
+     descenders (ğ, ç) and ascender diacritics (İ, Ğ breve) so they
+     never overlap with the line above or below. */
+  line-height: 1;
   font-size: clamp(56px, 9.5vw, 168px);
 }
 .display em {
   font-style: italic;
-  font-family: "Cormorant Garamond", "Inter", serif;
+  font-family: "Inter", sans-serif;
   font-weight: 300;
   letter-spacing: -0.01em;
 }
@@ -109,7 +110,7 @@ html.lenis, html.lenis body { height: auto; }
 }
 .h-section em {
   font-style: italic;
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Inter", sans-serif;
   font-weight: 300;
 }
 
@@ -266,12 +267,6 @@ html.lenis, html.lenis body { height: auto; }
 .hero h1 { color: var(--cream); }
 .hero h1 .line {
   display: block;
-  /* Allow ascenders/descenders and Turkish diacritics (ğ, Ğ, İ) to
-     render without clipping. The slim vertical padding gives breve and
-     dot-above marks visible breathing room without changing the
-     perceived line stack. */
-  padding-top: 0.08em;
-  padding-bottom: 0.02em;
 }
 .hero h1 .line > span {
   display: inline-block;
@@ -386,7 +381,7 @@ html.lenis, html.lenis body { height: auto; }
   letter-spacing: -0.02em;
 }
 .manifesto .big em {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Inter", sans-serif;
   font-style: italic;
   font-weight: 300;
 }
@@ -454,7 +449,7 @@ html.lenis, html.lenis body { height: auto; }
   line-height: 1.05;
   letter-spacing: -0.015em;
 }
-.scaler .scaler-text .l2 em { font-family: "Cormorant Garamond", serif; font-style: italic; }
+.scaler .scaler-text .l2 em { font-family: "Inter", sans-serif; font-style: italic; }
 
 /* ---------- Projects (horizontal sticky scroll) ---------- */
 .projects {
@@ -534,7 +529,7 @@ html.lenis, html.lenis body { height: auto; }
   letter-spacing: -0.015em;
   line-height: 1;
 }
-.project-card .pmeta .name em { font-family: "Cormorant Garamond", serif; font-style: italic; font-weight: 400; }
+.project-card .pmeta .name em { font-family: "Inter", sans-serif; font-style: italic; font-weight: 400; }
 .project-card .pmeta .loc { font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase; opacity: 0.78; margin-top: 12px; }
 .project-card .pmeta .side {
   text-align: right;
@@ -601,7 +596,7 @@ html.lenis, html.lenis body { height: auto; }
   line-height: 1.02;
   letter-spacing: -0.02em;
 }
-.project-card.intro .title em { font-family: "Cormorant Garamond", serif; font-style: italic; }
+.project-card.intro .title em { font-family: "Inter", sans-serif; font-style: italic; }
 .project-card.intro .foot { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; opacity: 0.85; }
 
 /* End card */
@@ -710,7 +705,7 @@ html.lenis, html.lenis body { height: auto; }
   letter-spacing: -0.01em;
   line-height: 1.15;
 }
-.location .sticky-info .item .v em { font-family: "Cormorant Garamond", serif; font-style: italic; }
+.location .sticky-info .item .v em { font-family: "Inter", sans-serif; font-style: italic; }
 .location .sticky-info .top-row { display: flex; flex-direction: column; gap: 18px; }
 .location .sticky-info .top-row .htitle {
   font-family: "Inter", sans-serif;
@@ -719,7 +714,7 @@ html.lenis, html.lenis body { height: auto; }
   letter-spacing: -0.015em;
   line-height: 1.04;
 }
-.location .sticky-info .top-row .htitle em { font-family: "Cormorant Garamond", serif; font-style: italic; }
+.location .sticky-info .top-row .htitle em { font-family: "Inter", sans-serif; font-style: italic; }
 
 .location .map svg { width: 100%; height: 100%; display: block; }
 
@@ -863,7 +858,7 @@ html.lenis, html.lenis body { height: auto; }
   color: var(--cream);
   opacity: 0.95;
 }
-.footer .giant em { font-family: "Cormorant Garamond", serif; font-style: italic; }
+.footer .giant em { font-family: "Inter", sans-serif; font-style: italic; }
 
 /* ---------- Cursor ---------- */
 .cursor {
