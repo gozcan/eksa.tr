@@ -351,6 +351,40 @@
     window.addEventListener("resize", update);
   }
 
+  // -------- Nav color by visible section --------
+  function initNavTheme() {
+    const nav = $(".nav");
+    if (!nav) return;
+    const lightSections = new Set(["manifesto", "projects", "location"]);
+
+    function sectionAtNav() {
+      const x = Math.min(window.innerWidth - 1, Math.max(0, window.innerWidth / 2));
+      const y = Math.min(window.innerHeight - 1, 82);
+      const stack = document.elementsFromPoint(x, y);
+      return stack.find((el) => {
+        if (el === nav || nav.contains(el)) return false;
+        return el.matches && (el.matches("section, footer, main") || el.closest("section, footer, main"));
+      });
+    }
+
+    function update() {
+      const hit = sectionAtNav();
+      const section = hit && (hit.matches("section, footer, main") ? hit : hit.closest("section, footer, main"));
+      const onLight = section && (
+        lightSections.has(section.id) ||
+        section.classList.contains("legal-page")
+      );
+      nav.classList.toggle("nav-on-light", !!onLight);
+      nav.classList.toggle("nav-on-dark", !onLight);
+    }
+
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    window.addEventListener("hashchange", () => requestAnimationFrame(update));
+    if (lenis && typeof lenis.on === "function") lenis.on("scroll", update);
+  }
+
   // -------- Mobile navigation --------
   function initMobileNav() {
     const nav = $(".nav");
@@ -390,6 +424,7 @@
     initAnchors();
     initScroll();
     initScrollProgress();
+    initNavTheme();
   }
 
   if (document.readyState === "loading") {

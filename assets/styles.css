@@ -188,8 +188,18 @@ html.lenis, html.lenis body { height: auto; }
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
   transition: padding 0.4s ease;
 }
+.nav.nav-on-light {
+  color: var(--coffee);
+  text-shadow: 0 1px 12px rgba(239, 231, 216, 0.42);
+}
+.nav.nav-on-dark {
+  color: var(--cream);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
+}
 .nav .brand { display: flex; align-items: center; gap: 10px; }
 .nav .brand img { height: 22px; width: auto; filter: brightness(0) invert(1) drop-shadow(0 2px 12px rgba(0, 0, 0, 0.55)); }
+.nav.nav-on-light .brand img { filter: brightness(0) drop-shadow(0 1px 10px rgba(239, 231, 216, 0.5)); }
+.nav.nav-on-dark .brand img { filter: brightness(0) invert(1) drop-shadow(0 2px 12px rgba(0, 0, 0, 0.55)); }
 .nav .menu-toggle {
   display: none;
   width: 42px;
@@ -1170,6 +1180,7 @@ body.measuring-anchors .stack > .footer {
     transform: translateY(-8px);
     transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
   }
+  .nav.is-open .links { color: var(--cream); }
   .nav.is-open .links {
     opacity: 1;
     visibility: visible;
