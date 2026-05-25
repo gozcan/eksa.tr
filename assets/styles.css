@@ -183,9 +183,20 @@ html.lenis, html.lenis body { height: auto; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  mix-blend-mode: difference;
   color: var(--cream);
+  isolation: isolate;
+  text-shadow: 0 1px 18px rgba(0, 0, 0, 0.42);
   transition: padding 0.4s ease;
+}
+.nav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(28, 23, 20, 0.66) 0%, rgba(28, 23, 20, 0.34) 62%, rgba(28, 23, 20, 0) 100%);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 .nav .brand { display: flex; align-items: center; gap: 10px; }
 .nav .brand img { height: 22px; width: auto; filter: brightness(0) invert(1); }
@@ -1148,7 +1159,6 @@ body.measuring-anchors .stack > .footer {
 /* ---------- Responsive ---------- */
 @media (max-width: 1024px) {
   .nav { padding: 16px 22px; gap: 14px; }
-  .nav.is-open { mix-blend-mode: normal; }
   .nav .menu-toggle { display: inline-flex; }
   .nav .links {
     position: absolute;
