@@ -309,6 +309,7 @@
         } else {
           smoothScrollTo(top, 900);
         }
+        history.pushState(null, "", id);
       });
     });
   }
@@ -340,12 +341,42 @@
     window.addEventListener("resize", update);
   }
 
+  // -------- Mobile navigation --------
+  function initMobileNav() {
+    const nav = $(".nav");
+    const toggle = $(".menu-toggle", nav || document);
+    if (!nav || !toggle) return;
+
+    function setOpen(open) {
+      nav.classList.toggle("is-open", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    }
+
+    toggle.addEventListener("click", () => {
+      setOpen(!nav.classList.contains("is-open"));
+    });
+
+    $$(".links a", nav).forEach((link) => {
+      link.addEventListener("click", () => setOpen(false));
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") setOpen(false);
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!nav.classList.contains("is-open")) return;
+      if (!nav.contains(e.target)) setOpen(false);
+    });
+  }
+
   // -------- Boot --------
   function boot() {
     splitWords();
     initLenis();
     setupFadeUp();
     initCursor();
+    initMobileNav();
     initAnchors();
     initScroll();
     initScrollProgress();

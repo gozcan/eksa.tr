@@ -14,14 +14,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500&amp;family=JetBrains+Mono:wght@200;300;400&amp;display=swap" />
-  <link rel="stylesheet" href="/assets/styles.css?v=6" />
+  <link rel="stylesheet" href="/assets/styles.css?v=9" />
+  <script src="/assets/scroll.js?v=9" defer></script>
 </head>
 <body>
   <nav class="nav scrolled" data-screen-label="00 Nav">
     <a class="brand" href="/en/" aria-label="EKSA">
       <img src="/assets/eksa-logo.png" alt="EKSA" />
     </a>
-    <div class="links">
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
+      <span></span>
+      <span></span>
+    </button>
+    <div class="links" id="primary-navigation">
       <a href="/en/#projects">Projects</a>
       <a href="/en/#manifesto">Philosophy</a>
       <a href="/en/#about">About</a>
