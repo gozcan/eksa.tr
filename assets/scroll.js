@@ -303,7 +303,7 @@
         const target = document.querySelector(id);
         if (!target) return;
         e.preventDefault();
-        const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY);
+        const top = getAnchorTop(target);
         if (lenis && typeof lenis.scrollTo === "function") {
           lenis.scrollTo(top, { duration: 1.4, lock: false, force: true });
         } else {
@@ -312,6 +312,16 @@
         history.pushState(null, "", id);
       });
     });
+  }
+  function getAnchorTop(target) {
+    if (target.id === "top") return 0;
+    if (target.closest(".stack")) {
+      document.body.classList.add("measuring-anchors");
+      const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY);
+      document.body.classList.remove("measuring-anchors");
+      return top;
+    }
+    return Math.max(0, target.getBoundingClientRect().top + window.scrollY);
   }
   function smoothScrollTo(targetY, duration) {
     const startY = window.scrollY;

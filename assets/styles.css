@@ -272,6 +272,11 @@ html.lenis, html.lenis body { height: auto; }
   min-height: 100vh;
   overflow: hidden;
 }
+body.measuring-anchors .hero,
+body.measuring-anchors .stack > section,
+body.measuring-anchors .stack > .footer {
+  position: relative !important;
+}
 /* The marquee strip is a thin band, not a stacked card. */
 .stack > .marquee-strip {
   position: relative;
