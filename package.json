@@ -1,0 +1,12 @@
+{
+  "name": "eksa-tr",
+  "version": "1.0.0",
+  "private": true,
+  "description": "EKSA Yatırım İnşaat Sanayi ve Ticaret Limited Şirketi — official site (static HTML + Vercel serverless API for the contact form).",
+  "dependencies": {
+    "nodemailer": "^6.9.16"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

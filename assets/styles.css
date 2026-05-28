@@ -1073,6 +1073,18 @@ body.measuring-anchors .stack > .footer {
 }
 .contact button:hover { background: var(--brown-2); color: var(--cream); padding-right: 52px; }
 .contact button:hover span { transform: translateX(6px); }
+.contact button:disabled { opacity: 0.7; cursor: progress; }
+.contact .cf-status {
+  grid-column: 1 / -1;
+  margin-top: 18px;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  color: var(--cream);
+  opacity: 0.85;
+  min-height: 1.2em;
+}
+.contact .cf-status:empty { display: none; }
 
 /* ---------- Footer ---------- */
 .footer {

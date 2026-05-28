@@ -63,13 +63,13 @@
   <!-- Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500&amp;family=JetBrains+Mono:wght@200;300;400&amp;display=swap" />
 
-  <link rel="stylesheet" href="/assets/styles.css?v=15" />
+  <link rel="stylesheet" href="/assets/styles.css?v=16" />
 
   <!-- GSAP + ScrollTrigger + Lenis -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
-  <script src="/assets/scroll.js?v=15" defer></script>
+  <script src="/assets/scroll.js?v=16" defer></script>
 
   <!-- Structured data: Organization (with contracting / urban-renewal subtypes) -->
   <script type="application/ld+json">
@@ -684,33 +684,84 @@
         <p class="fu d2">A specialist from our sales office will reach you within 24 hours. All conversations are entirely confidential.</p>
       </div>
 
-      <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='Thank you ✓'; this.querySelector('button').disabled=true;">
-        <div class="field">
-          <label>Full name</label>
-          <input type="text" placeholder="Your first and last name" required />
+      <form id="contact-form" novalidate>
+        <input type="hidden" name="locale" value="en" />
+        <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden">
+          <label>Website (leave blank)<input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
         </div>
         <div class="field">
-          <label>Email</label>
-          <input type="email" placeholder="you@email.com" required />
+          <label for="cf-name">Full name</label>
+          <input id="cf-name" type="text" name="name" placeholder="Your first and last name" autocomplete="name" required />
         </div>
         <div class="field">
-          <label>Phone</label>
-          <input type="tel" placeholder="+90 5xx xxx xx xx" />
+          <label for="cf-email">Email</label>
+          <input id="cf-email" type="email" name="email" placeholder="you@email.com" autocomplete="email" required />
         </div>
         <div class="field">
-          <label>Project of interest</label>
-          <input type="text" placeholder="Mareta Yeniköy, Karya Boğaziçi..." />
+          <label for="cf-phone">Phone</label>
+          <input id="cf-phone" type="tel" name="phone" placeholder="+90 5xx xxx xx xx" autocomplete="tel" />
+        </div>
+        <div class="field">
+          <label for="cf-project">Project of interest</label>
+          <input id="cf-project" type="text" name="project" placeholder="Mareta Yeniköy, Karya Boğaziçi..." />
         </div>
         <div class="field full">
-          <label>Your message</label>
-          <textarea rows="3" placeholder="Budget range, expectations, your preferred way to meet..."></textarea>
+          <label for="cf-message">Your message</label>
+          <textarea id="cf-message" name="message" rows="3" placeholder="Budget range, expectations, your preferred way to meet..."></textarea>
         </div>
 
         <div class="submit-row">
           <p class="legal">Your data is kept under GDPR/KVKK only so we can respond to you, and is never shared with third parties.</p>
-          <button type="submit">Send request <span>→</span></button>
+          <button type="submit"><span class="cf-label">Send request</span> <span class="cf-arrow">→</span></button>
         </div>
+        <p class="cf-status" role="status" aria-live="polite"></p>
       </form>
+      <script>
+      (function () {
+        var form = document.getElementById('contact-form');
+        if (!form) return;
+        var btn = form.querySelector('button[type="submit"]');
+        var label = btn.querySelector('.cf-label');
+        var status = form.querySelector('.cf-status');
+        var ENDPOINT = '/api/contact';
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var name = form.elements['name'].value.trim();
+          var email = form.elements['email'].value.trim();
+          if (!name || !email) {
+            status.textContent = 'Please fill in name and email.';
+            return;
+          }
+          status.textContent = '';
+          btn.disabled = true;
+          var originalLabel = label.textContent;
+          label.textContent = 'Sending…';
+          var data = {};
+          new FormData(form).forEach(function (v, k) { data[k] = v; });
+          fetch(ENDPOINT, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(data)
+          }).then(function (r) {
+            return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, body: j }; });
+          }).then(function (res) {
+            if (res.ok) {
+              label.textContent = 'Thank you ✓';
+              status.textContent = 'Your message has been received. We will reply within 24 hours.';
+              form.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"], textarea').forEach(function (el) { el.value = ''; });
+            } else {
+              label.textContent = originalLabel;
+              btn.disabled = false;
+              status.textContent = (res.body && res.body.error) || 'Something went wrong, please try again.';
+            }
+          }).catch(function () {
+            label.textContent = originalLabel;
+            btn.disabled = false;
+            status.textContent = 'Connection error. Please try again.';
+          });
+        });
+      })();
+      </script>
     </div>
   </section>
 
