@@ -5,14 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Primary SEO -->
-  <title>EKSA — Luxury Residential Projects | Istanbul</title>
-  <meta name="description" content="EKSA luxury residential projects — limited-edition villas and apartments along the Bosphorus and across Istanbul's most sought-after districts. The signature of life since 2008." />
-  <meta name="keywords" content="EKSA, luxury residences, Istanbul luxury apartment, Bosphorus villa, Bebek villa, Yeniköy villa, Tarabya, Etiler, Sarıyer, Zekeriyaköy, Mareta Yeniköy, Karya Boğaziçi" />
+  <title>EKSA — General Contracting, Urban Renewal &amp; Luxury Residences | Ekşioğlu Group Istanbul</title>
+  <meta name="description" content="EKSA is a general contracting and real estate development company within Ekşioğlu Group. Urban renewal, luxury residences and bespoke projects across Istanbul — Bebek, Yeniköy, Tarabya, Sarıyer, Ataşehir — since 2008." />
+  <meta name="keywords" content="EKSA, Ekşioğlu, Ekşioğlu Group, Ekşioğlu Holding, general contractor, contracting, construction Istanbul, urban renewal, urban transformation, kentsel dönüşüm, luxury residences, luxury apartment Istanbul, Bosphorus villa, Bebek villa, Yeniköy villa, Tarabya, Etiler, Sarıyer, Ataşehir, turnkey construction, real estate development, earthquake retrofit, Mareta Yeniköy, Karya Boğaziçi" />
   <meta name="author" content="EKSA Yatırım İnşaat Sanayi ve Ticaret Limited Şirketi" />
+  <meta name="publisher" content="Ekşioğlu Group" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="googlebot" content="index, follow" />
   <meta name="theme-color" content="#2A1810" />
   <meta name="format-detection" content="telephone=no" />
+  <!-- Geo signals for local SEO (Ataşehir office, Istanbul service area) -->
+  <meta name="geo.region" content="TR-34" />
+  <meta name="geo.placename" content="Istanbul" />
+  <meta name="geo.position" content="40.9833;29.1167" />
+  <meta name="ICBM" content="40.9833, 29.1167" />
 
   <!-- Canonical & language alternates -->
   <link rel="canonical" href="https://www.eksa.tr/en/" />
@@ -29,8 +35,8 @@
   <meta property="og:site_name" content="EKSA" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:locale:alternate" content="tr_TR" />
-  <meta property="og:title" content="EKSA — Luxury Residential Projects | Istanbul" />
-  <meta property="og:description" content="Limited-edition, collection-grade villas and apartments along the Bosphorus and Istanbul's most sought-after districts. Since 2008." />
+  <meta property="og:title" content="EKSA — Contracting, Urban Renewal &amp; Luxury Residences | Ekşioğlu Group" />
+  <meta property="og:description" content="An Ekşioğlu Group company · General contracting, urban renewal and collection-grade luxury residences in Istanbul. Since 2008." />
   <meta property="og:url" content="https://www.eksa.tr/en/" />
   <meta property="og:image" content="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=630&q=85&auto=format&fit=crop&crop=focalpoint" />
   <meta property="og:image:width" content="1200" />
@@ -39,8 +45,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="EKSA — Luxury Residential Projects" />
-  <meta name="twitter:description" content="Limited-edition, collection-grade villas and apartments along the Bosphorus." />
+  <meta name="twitter:title" content="EKSA — Contracting · Urban Renewal · Luxury Residences | Ekşioğlu Group" />
+  <meta name="twitter:description" content="Ekşioğlu Group company · general contracting, urban renewal and luxury residences in Istanbul." />
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=630&q=85&auto=format&fit=crop&crop=focalpoint" />
   <meta name="twitter:image:alt" content="EKSA luxury residential project — architectural detail" />
 
@@ -57,41 +63,65 @@
   <!-- Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500&amp;family=JetBrains+Mono:wght@200;300;400&amp;display=swap" />
 
-  <link rel="stylesheet" href="/assets/styles.css?v=14" />
+  <link rel="stylesheet" href="/assets/styles.css?v=15" />
 
   <!-- GSAP + ScrollTrigger + Lenis -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
-  <script src="/assets/scroll.js?v=14" defer></script>
+  <script src="/assets/scroll.js?v=15" defer></script>
 
-  <!-- Structured data: Organization -->
+  <!-- Structured data: Organization (with contracting / urban-renewal subtypes) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": ["Organization", "GeneralContractor", "ProfessionalService", "LocalBusiness"],
+    "@id": "https://www.eksa.tr/#organization",
     "name": "EKSA",
+    "alternateName": ["EKSA Yatırım", "Ekşioğlu Group EKSA"],
     "legalName": "EKSA Yatırım İnşaat Sanayi ve Ticaret Limited Şirketi",
     "url": "https://www.eksa.tr/",
     "logo": "https://www.eksa.tr/assets/eksa-logo.png",
-    "description": "Luxury residential projects in Istanbul — limited-edition, collection-grade living spaces along the Bosphorus. An Ekşioğlu Group company.",
+    "image": "https://www.eksa.tr/assets/eksa-logo.png",
+    "description": "EKSA is a general contracting and real estate development company within Ekşioğlu Group. Urban renewal, luxury residences and bespoke projects in Istanbul since 2008.",
     "foundingDate": "2008",
     "slogan": "The architecture of silence.",
+    "priceRange": "$$$$",
+    "knowsAbout": [
+      "General Contracting",
+      "Urban Renewal",
+      "Kentsel Dönüşüm",
+      "Luxury Residential Development",
+      "Real Estate Development",
+      "Turnkey Construction",
+      "Earthquake Retrofit",
+      "Bosphorus Architecture"
+    ],
     "parentOrganization": {
       "@type": "Organization",
-      "name": "Ekşioğlu Group"
+      "name": "Ekşioğlu Group",
+      "alternateName": ["Ekşioğlu Holding", "Ekşioğlu Grup"]
     },
-    "areaServed": {
-      "@type": "City",
-      "name": "Istanbul",
-      "addressCountry": "TR"
-    },
+    "areaServed": [
+      { "@type": "City", "name": "Istanbul", "addressCountry": "TR" },
+      { "@type": "AdministrativeArea", "name": "Bosphorus" },
+      { "@type": "AdministrativeArea", "name": "Ataşehir" },
+      { "@type": "AdministrativeArea", "name": "Bebek" },
+      { "@type": "AdministrativeArea", "name": "Yeniköy" },
+      { "@type": "AdministrativeArea", "name": "Tarabya" },
+      { "@type": "AdministrativeArea", "name": "Sarıyer" }
+    ],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Barbaros Mah. Şen Sk. No: 16/6",
       "addressLocality": "Ataşehir",
       "addressRegion": "Istanbul",
       "addressCountry": "TR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 40.9833,
+      "longitude": 29.1167
     },
     "contactPoint": {
       "@type": "ContactPoint",
@@ -100,7 +130,40 @@
       "contactType": "sales",
       "areaServed": "TR",
       "availableLanguage": ["Turkish", "English"]
-    }
+    },
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "General Contracting",
+          "alternateName": "Müteahhitlik",
+          "serviceType": "General Contracting",
+          "url": "https://www.eksa.tr/en/contracting/",
+          "areaServed": { "@type": "City", "name": "Istanbul" }
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Urban Renewal",
+          "alternateName": "Kentsel Dönüşüm",
+          "serviceType": "Urban Renewal",
+          "url": "https://www.eksa.tr/en/urban-renewal/",
+          "areaServed": { "@type": "City", "name": "Istanbul" }
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Luxury Residential Development",
+          "serviceType": "Luxury Residential Development",
+          "areaServed": { "@type": "City", "name": "Istanbul" }
+        }
+      }
+    ]
   }
   </script>
 
@@ -111,7 +174,58 @@
     "@type": "WebSite",
     "name": "EKSA",
     "url": "https://www.eksa.tr/en/",
-    "inLanguage": "en"
+    "inLanguage": "en",
+    "publisher": { "@id": "https://www.eksa.tr/#organization" }
+  }
+  </script>
+
+  <!-- Structured data: Urban Renewal FAQ (FAQPage rich result) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is urban renewal (kentsel dönüşüm) in Turkey?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Urban renewal under Turkey's Law No. 6306 is the process of transforming earthquake-unsafe or economically obsolete buildings into modern, high-value structures. EKSA delivers end-to-end general contracting for urban renewal projects in Istanbul, working closely with property co-owners throughout the process."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which Istanbul districts does EKSA work in?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Primarily along the Bosphorus and Istanbul's most sought-after districts: Bebek, Yeniköy, Tarabya, Sarıyer, Etiler, Zekeriyaköy, Ataşehir and Çamlıca."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does EKSA's general contracting service include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EKSA's turnkey general contracting covers architectural coordination, permits, excavation, structural works, MEP installation, finishes, landscaping and handover. We work in partnership with independent architectural studios."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What group does EKSA belong to?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EKSA is an independent general contracting and real-estate development brand operating under Ekşioğlu Group. It was founded in Istanbul in 2008."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are property co-owners' rights during urban renewal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Under Law No. 6306 co-owners are entitled to risk assessment, rent assistance, subsidised loans, priority unit selection in the new building, and ongoing legal coordination. EKSA maintains transparent communication with co-owners at every stage."
+        }
+      }
+    ]
   }
   </script>
 
@@ -150,6 +264,7 @@
     </button>
     <div class="links" id="primary-navigation">
       <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
       <a href="#manifesto">Philosophy</a>
       <a href="#about">About</a>
       <a href="#location">Location</a>
@@ -260,8 +375,48 @@
     </div>
   </section>
 
+  <!-- ===================== SERVICES ===================== -->
+  <section id="services" class="services" data-screen-label="04 Services">
+    <div class="wrap">
+      <div class="top-bar fu">
+        <div class="num">— 04 / Services</div>
+        <div class="right-tag">EKSA · Ekşioğlu Group</div>
+      </div>
+
+      <div class="lead fu d2">
+        <h2 class="services-h">
+          <span class="l">Contracting, urban renewal</span>
+          <span class="l">and collection-grade <em>residences.</em></span>
+        </h2>
+      </div>
+
+      <div class="grid fu d3">
+        <article>
+          <div class="num">01</div>
+          <h3>Luxury Residential Development</h3>
+          <p>Collection-grade residential projects produced in limited numbers along the Bosphorus and across Istanbul's most sought-after districts. Goldsmith-level architectural concept, material and detail.</p>
+        </article>
+        <article>
+          <div class="num">02</div>
+          <h3><a href="/en/contracting/">General Contracting</a></h3>
+          <p>Turnkey general contracting from permits to handover. Delivered in partnership with independent architectural studios, at the highest quality standards.</p>
+        </article>
+        <article>
+          <div class="num">03</div>
+          <h3><a href="/en/urban-renewal/">Urban Renewal</a></h3>
+          <p>Under Turkey's Law No. 6306, transforming earthquake-unsafe building stock in Istanbul's heritage districts into safe, modern, high-value structures. Transparent process with co-owners.</p>
+        </article>
+        <article>
+          <div class="num">04</div>
+          <h3>Bespoke Project Development</h3>
+          <p>End-to-end development for boutique residences, hotels and mixed-use projects. From land acquisition and design to sales and handover — single point of accountability.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== PINNED IMAGE SCALER ===================== -->
-  <section class="scaler" data-screen-label="04 Image">
+  <section class="scaler" data-screen-label="05 Image">
     <div class="stick">
       <div class="frame">
         <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=2200&q=85&auto=format&fit=crop" alt="Architectural detail" />
@@ -280,7 +435,7 @@
         <div class="htrack">
         <article class="project-card intro">
           <div class="ptop">
-            <span>— 04 / Selected collection</span>
+            <span>— 05 / Selected collection</span>
             <span>2010 → 2026</span>
           </div>
           <div class="title">Seven <em>collections</em><br/>that stand <em>alone</em>.</div>
@@ -429,7 +584,7 @@
     <div class="wrap">
       <div class="head">
         <div>
-          <div class="eyebrow fu"><span class="dot"></span>05 / Location</div>
+          <div class="eyebrow fu"><span class="dot"></span>06 / Location</div>
           <h2 class="h-section fu d2" style="margin-top:30px;">Two shores of the <em>Bosphorus.</em></h2>
         </div>
         <div class="right fu d3">
